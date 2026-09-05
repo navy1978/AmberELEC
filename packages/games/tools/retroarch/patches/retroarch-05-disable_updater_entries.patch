@@ -2,7 +2,7 @@ diff --git a/menu/menu_displaylist.c b/menu/menu_displaylist.c
 index 2a7db944af..821fab20e0 100644
 --- a/menu/menu_displaylist.c
 +++ b/menu/menu_displaylist.c
-@@ -14748,52 +14748,52 @@ bool menu_displaylist_ctl(enum menu_displaylist_ctl_state type,
+@@ -14921,40 +14921,40 @@ bool menu_displaylist_ctl(enum menu_displaylist_ctl_state type,
  #endif /* HAVE_UPDATE_CORES */
  
  #if defined(HAVE_COMPRESSION) && !defined(HAVE_MIST)
@@ -57,27 +57,6 @@ index 2a7db944af..821fab20e0 100644
 +                        // MENU_SETTING_ACTION, 0, 0, NULL))
 +                  // count++;
  
- #if 0
- /* Thumbnailpack removal */
--               if (settings->bools.menu_show_legacy_thumbnail_updater)
--               {
--                  if (menu_entries_append(info->list,
--                           msg_hash_to_str(MENU_ENUM_LABEL_VALUE_THUMBNAILS_UPDATER_LIST),
--                           msg_hash_to_str(MENU_ENUM_LABEL_THUMBNAILS_UPDATER_LIST),
--                           MENU_ENUM_LABEL_THUMBNAILS_UPDATER_LIST,
--                           MENU_SETTING_ACTION, 0, 0, NULL))
--                     count++;
--               }
-+               // if (settings->bools.menu_show_legacy_thumbnail_updater)
-+               // {
-+                  // if (menu_entries_append(info->list,
-+                           // msg_hash_to_str(MENU_ENUM_LABEL_VALUE_THUMBNAILS_UPDATER_LIST),
-+                           // msg_hash_to_str(MENU_ENUM_LABEL_THUMBNAILS_UPDATER_LIST),
-+                           // MENU_ENUM_LABEL_THUMBNAILS_UPDATER_LIST,
-+                           // MENU_SETTING_ACTION, 0, 0, NULL))
-+                     // count++;
-+               // }
- #endif
  #ifdef HAVE_NETWORKING
 -               if (MENU_DISPLAYLIST_PARSE_SETTINGS_ENUM(info->list,
 -                        MENU_ENUM_LABEL_NETWORK_ON_DEMAND_THUMBNAILS,
