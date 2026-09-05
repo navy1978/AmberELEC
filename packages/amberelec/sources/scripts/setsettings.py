@@ -646,7 +646,9 @@ def set_settings(rom_name: str, core: str, platform: str, controllers: str, auto
         # configure custom scaling
         # needs some grouping to reflect the hack systems as well (i. e. gb=gb, gbh, gbc and gbch)
         ra_append_dict['custom_viewport_x'] = system_viewport[platform][0]
-        ra_append_dict['custom_viewport_y'] = system_viewport[platform][1]
+        # RetroArch 1.22+ applies GL's inverted Y origin before viewport bias;
+        # zero lets the bias centre the viewport.
+        ra_append_dict['custom_viewport_y'] = 0
         ra_append_dict['custom_viewport_width'] = system_viewport[platform][2]
         ra_append_dict['custom_viewport_height'] = system_viewport[platform][3]
     else:
