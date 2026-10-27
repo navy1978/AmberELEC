@@ -14,7 +14,14 @@ elif [ "${DEVICE}" = "RG503" ]; then
   PKG_VERSION="1e3afa83e278b5efb2d67a73e17cae1859f2c4d0"
   PKG_SHA256="b9c5edbf3725099fa3d853fa9780fa5c6f3897d2ac42839ff7f0295d9275a1f1"
   PKG_URL="https://github.com/navy1978/kernel-rk356x/archive/${PKG_VERSION}.tar.gz"
-elif [[ "${DEVICE}" =~ ^(RG353|RGARCD|RK3566)$ ]]; then
+elif [[ "${DEVICE}" == RGARCD ]]; then
+  PKG_VERSION="de17ed3d3465a579064928f2ea6a9b52b65e687f"
+  PKG_GIT_CLONE_BRANCH="rg-arc-pr"
+  PKG_GIT_CLONE_SINGLE="yes"
+  PKG_SHA256=""
+  PKG_SITE="https://github.com/navy1978/kernel-rk356x"
+  PKG_URL="${PKG_SITE}.git"
+elif [[ "${DEVICE}" =~ ^(RG353|RK3566)$ ]]; then
   PKG_VERSION="4bad54d061eafe5ccc7a38668522aab8d0f1658b"
   PKG_SHA256="90e76b967d3eafccd4869c5cf73ee6df736524aea7716c783079c63aa85d3783"
   PKG_URL="https://github.com/AmberELEC/kernel-rk356x/archive/${PKG_VERSION}.tar.gz"
