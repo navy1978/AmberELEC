@@ -15,7 +15,7 @@ elif [ "${DEVICE}" = "RG503" ]; then
   PKG_SHA256="b9c5edbf3725099fa3d853fa9780fa5c6f3897d2ac42839ff7f0295d9275a1f1"
   PKG_URL="https://github.com/navy1978/kernel-rk356x/archive/${PKG_VERSION}.tar.gz"
 elif [[ "${DEVICE}" == RGARCD ]]; then
-  PKG_VERSION="de17ed3d3465a579064928f2ea6a9b52b65e687f"
+  PKG_VERSION="136868a02f7f48da6a143e1fc3ed911d47c6853c"
   PKG_GIT_CLONE_BRANCH="rg-arc-pr"
   PKG_GIT_CLONE_SINGLE="yes"
   PKG_SHA256=""
